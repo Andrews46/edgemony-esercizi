@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background: rgb(37, 226, 229);
+}
 .button {
   padding: 8px 15px;
   background-color: rgb(24, 59, 218);
@@ -10,18 +13,30 @@
   border-radius: 3px;
   border: none;
   font-weight: bold;
+  position: relative;
 }
 .productsList {
+  position: relative;
+  justify-content: center;
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  text-align: center;
 }
 .card {
-  display: flex;
-  padding: 20px;
   height: 400px;
   width: 400px;
-  border: 1px solid black;
+  border: 1px solid rgb(206, 255, 203);
   border-radius: 10px;
   gap: 20px;
+}
+.images {
+  height: 300px;
+  width: 100%;
+  border: 2px solid red;
+  object-fit: cover;
+  object-position: 0%;
+}
+.title {
+  color: blue;
 }

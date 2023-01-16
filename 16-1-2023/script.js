@@ -1,6 +1,7 @@
 const productsElement = document.querySelector(".productsList");
 const downloadDataBtn = document.querySelector(".button");
 const loaderElement = document.querySelector(".loader");
+
 downloadDataBtn.addEventListener("click", () => {
   loaderElement.textContent = "loading...";
   fetch("https://api.escuelajs.co/api/v1/products")
@@ -25,13 +26,16 @@ const dataManupulation = (data) => {
     const divContainer = document.createElement("div");
     divContainer.className = "card";
     const titleElement = document.createElement("h1");
+    titleElement.className = "title";
     titleElement.textContent = item.title;
-
+    const imgEl = document.createElement("img");
+    imgEl.className = "images";
+    imgEl.src = item.images;
     const indexContainer = document.createElement("p");
     indexContainer.textContent = item.price;
     divContainer.appendChild(titleElement);
     divContainer.appendChild(indexContainer);
-
+    divContainer.appendChild(imgEl);
     productsElement.appendChild(divContainer);
   });
 };
