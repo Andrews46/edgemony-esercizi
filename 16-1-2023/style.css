@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.button {
+  padding: 8px 15px;
+  background-color: rgb(24, 59, 218);
+  color: white;
+  border-radius: 3px;
+  border: none;
+  font-weight: bold;
+}
+.productsList {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card {
+  display: flex;
+  padding: 20px;
+  height: 400px;
+  width: 400px;
+  border: 1px solid black;
+  border-radius: 10px;
+  gap: 20px;
+}
