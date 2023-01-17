@@ -144,3 +144,16 @@ section .products .card button {
   border: 1px solid blue;
   color: rgb(211, 9, 9);
 }
+.footer1 {
+  border: 2px solid rgb(47, 47, 47);
+  height: 250px;
+  background-color: dimgrey;
+}
+.titlef {
+  text-decoration: none;
+  font-weight: 400;
+  border-bottom: 0;
+  padding: 10px;
+  border-right: 1px solid yellow;
+  color: chartreuse;
+}

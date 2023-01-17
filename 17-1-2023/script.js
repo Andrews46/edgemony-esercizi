@@ -9,7 +9,7 @@ const img3 = document.querySelector("#img-3");
 const hamburgerBtn = document.querySelector(".hamburger");
 const tendina = document.querySelector(".tendina");
 const productsList = document.querySelector(".products");
-const footer = document.querySelector("footer");
+const footer = document.querySelector(".footer1");
 
 const cart = [];
 
