@@ -81,10 +81,7 @@ const cardCreator = (item) => {
 
   addBtn.addEventListener("click", () => {
     cartPopulator(item);
-    // cartCreation();
-    // console.log(cart);
     alert("inserita al carrello");
-    // addBtn.addEventListener("click", () => {});
   });
 
   cardEl.append(imgEl, h1El, priceEl, descEl, addBtn);
@@ -97,7 +94,8 @@ const cartCreation = () => {
     const cartEl = document.createElement("div");
     cartEl.className = "cartRow";
     cartEl.innerHTML = `<p>Q.ty: ${item.qty}</p><p>${item.title}</p><p>${item.price}</p>`;
-    const btn1El = document.querySelector("button");
+    const btn1El = document.createElement("button");
+    btn1El.className = "elimina";
     btn1El.textContent = "elimina";
 
     btn1El.addEventListener("click", () => {
@@ -131,9 +129,3 @@ const cartPopulator = (item) => {
   console.log(cart);
   cartCreation();
 };
-const formSubmit = document.querySelector(".submit");
-formSubmit.addEventListener("click", () => {
-  console.log(addSubmit);
-});
-
-const addSubmit = [];
