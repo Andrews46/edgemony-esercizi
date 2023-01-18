@@ -131,3 +131,9 @@ const cartPopulator = (item) => {
   console.log(cart);
   cartCreation();
 };
+const formSubmit = document.querySelector(".submit");
+formSubmit.addEventListener("click", () => {
+  console.log(addSubmit);
+});
+
+const addSubmit = [];
