@@ -143,6 +143,7 @@ section .products .card button {
 header .tendina .btnRemove {
   border: 1px solid blue;
   color: rgb(211, 9, 9);
+
 }
 .footer1 {
   border: 2px solid rgb(47, 47, 47);
