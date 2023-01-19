@@ -50,7 +50,7 @@ hamburgerBtn.addEventListener("click", () => {
 fetch("https://api.escuelajs.co/api/v1/products/")
   .then((res) => res.json())
   .then((data) => {
-    const newData = data.filter((item) => item.category.id === 5);
+    const newData = data.filter((item) => item.category.id === 124);
     newData.forEach((element) => {
       cardCreator(element);
       console.log(element);

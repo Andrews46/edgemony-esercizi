@@ -7,6 +7,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(4, 33, 250);
+  background-color: rgb(201, 218, 200);
 }
 
 header {
@@ -143,7 +144,6 @@ section .products .card button {
 header .tendina .btnRemove {
   border: 1px solid blue;
   color: rgb(211, 9, 9);
-
 }
 .footer1 {
   border: 2px solid rgb(47, 47, 47);
