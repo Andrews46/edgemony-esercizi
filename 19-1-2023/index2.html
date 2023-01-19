@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style2.css" />
+    <!-- <script src="./script.js" type="module"></script> -->
+    <script src="./script2.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <a class="col" href="index.html">Home</a>
+      <div class="hero">
+        <img
+          id="img-1"
+          class="show"
+          src="tendenze-ecommerce-2021-digitaltown.png"
+          alt="alt images"
+        />
+      </div>
+    </header>
+    <h2 class="title">Form per compilare lista prodotti</h2>
+    <div class="form1">
+      <form action="postForm">
+        <div class="formProduct">
+          <label for="titles"
+            >Titolo
+            <input class="titles" type="text" required />
+          </label>
+        </div>
+        <div class="formProduct">
+          <label for="price"
+            >Prezzo
+            <input class="price" type="number" required />
+          </label>
+        </div>
+        <div class="formProduct">
+          <label for="category"
+            >Categoria
+            <input class="category" type="number" required />
+          </label>
+        </div>
+        <div class="formProduct">
+          <label for="immagine"
+            >Immagine<input
+              class="image"
+              type="text"
+              placeholder="put an correct URL image"
+              required
+            />
+          </label>
+        </div>
+        <div class="formProduct">
+          <label for="descriptions"
+            >Descrizione
+            <textarea class="descriptions" type="text" required></textarea>
+          </label>
+        </div>
+        <input class="submit" type="submit" value="submit" />
+      </form>
+    </div>
+    <h2>Form per inserire le categorie</h2>
+    <div class="form2">
+      <form class="categoryForm">
+        <div class="formProduct">
+          <label for="name">Categoria Nome:</label>
+          <input name="name" type="text" class="categoryName" required />
+        </div>
+        <div class="formProduct">
+          <label for="image">Categoria Immagine:</label>
+          <input name="image" type="url" class="categoryImage" required />
+        </div>
+        <div class="formProduct">
+          <label for="name">Categoria Sport:</label>
+          <input name="Sport" type="text" class="categorySport" required />
+        </div>
+        <div class="formProduct">
+          <label for="name">Categoria Auto e Moto:</label>
+          <input
+            name="Auto e Moto"
+            type="text"
+            class="categoryAutoMoto"
+            required
+          />
+        </div>
+        <input class="submit" type="submit" value="submit" />
+      </form>
+    </div>
+  </body>
+</html>
