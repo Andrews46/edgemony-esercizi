@@ -1,0 +1,127 @@
+body {
+  background-color: cadetblue;
+}
+.containForm {
+  margin: auto;
+  padding: 20px;
+  display: table;
+  box-shadow: 4px 9px 30px 8px rgb(30, 27, 145);
+  background-color: rgb(138, 131, 131);
+}
+.home {
+  color: rgb(0, 34, 255);
+}
+h1 {
+  color: blue;
+  text-align: center;
+  padding: 40px;
+}
+#titleModifica {
+  display: flex;
+  justify-content: center;
+}
+#titles {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+}
+.titolo {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  margin: 5px;
+}
+
+#prices {
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+}
+.price {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5px;
+}
+#category {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.categorys {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5px;
+}
+#images {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.image {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5px;
+}
+#descr {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.descriptions {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5px;
+}
+.formCategories {
+  display: flex;
+  justify-content: center;
+}
+#namesCat {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.categoryName {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5px;
+}
+#catImage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.categoryImage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5px;
+}
+h2 {
+  text-align: center;
+  color: blue;
+}
+.formdelete {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+#delProduct {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#productId {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 5px;
+}

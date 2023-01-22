@@ -1,6 +1,3 @@
-import { metodoGet, metodoGetCat } from "./fetch.js";
-import { filterByCategort } from "./filter.js";
-
 const btn1 = document.querySelector("#btn-1");
 const btn2 = document.querySelector("#btn-2");
 const btn3 = document.querySelector("#btn-3");
@@ -13,12 +10,6 @@ const hamburgerBtn = document.querySelector(".hamburger");
 const tendina = document.querySelector(".tendina");
 const productsList = document.querySelector(".products");
 const footer = document.querySelector(".footer1");
-
-const select = document.querySelector("#categorySelect");
-select.addEventListener("change", (e) => {
-  console.log(select.value);
-  filterByCategort(select.value);
-});
 
 const cart = [];
 
@@ -56,43 +47,49 @@ hamburgerBtn.addEventListener("click", () => {
   tendina.classList.toggle("show");
 });
 
-metodoGet();
-metodoGetCat();
-
-export const cardCreator = (items, divId) => {
-  const divDaAppendere = document.querySelector(divId);
-  divDaAppendere.innerHTML = "";
-  items.forEach((item) => {
-    const cardEl = document.createElement("div");
-    cardEl.className = "card";
-
-    const imgEl = document.createElement("img");
-    imgEl.setAttribute("src", item.images);
-    imgEl.setAttribute("alt", "#");
-
-    const h1El = document.createElement("h1");
-    h1El.className = "title";
-    h1El.textContent = item.title.slice(0, 10).toUpperCase();
-
-    const priceEl = document.createElement("p");
-    priceEl.className = "price";
-    priceEl.textContent = item.price;
-
-    const descEl = document.createElement("p");
-    descEl.className = "description";
-    descEl.textContent = item.description.slice(0, 30);
-
-    const addBtn = document.createElement("button");
-    addBtn.textContent = "Aggiungi al Carrello";
-
-    addBtn.addEventListener("click", () => {
-      cartPopulator(item);
+fetch("https://api.escuelajs.co/api/v1/products")
+  .then((res) => res.json())
+  .then((data) => {
+    const newData = data.filter((item) => item.category.id === 1);
+    newData.forEach((element) => {
+      cardCreator(element);
+      console.log(element);
     });
+  })
+  .catch((e) => console.log("mio errore:", e));
 
-    cardEl.append(imgEl, h1El, priceEl, descEl, addBtn);
-    divDaAppendere.appendChild(cardEl);
+const cardCreator = (item) => {
+  const cardEl = document.createElement("div");
+  cardEl.className = "card";
+
+  const imgEl = document.createElement("img");
+  imgEl.setAttribute("src", item.images);
+  imgEl.setAttribute("alt", "#");
+
+  const h1El = document.createElement("h1");
+  h1El.className = "title";
+  h1El.textContent = item.title.slice(0, 10).toUpperCase();
+
+  const priceEl = document.createElement("p");
+  priceEl.className = "price";
+  priceEl.textContent = item.price;
+
+  const descEl = document.createElement("p");
+  descEl.className = "description";
+  descEl.textContent = item.description.slice(0, 30);
+
+  const addBtn = document.createElement("button");
+  addBtn.textContent = "Aggiungi al Carrello";
+
+  addBtn.addEventListener("click", () => {
+    cartPopulator(item);
+    alert("inserita al carrello");
   });
+
+  cardEl.append(imgEl, h1El, priceEl, descEl, addBtn);
+  productsList.append(cardEl);
 };
+
 const cartCreation = () => {
   tendina.innerHTML = "";
   cart.forEach((item, index) => {
@@ -133,12 +130,4 @@ const cartPopulator = (item) => {
 
   console.log(cart);
   cartCreation();
-};
-export const creazioneSelectCategories = (arrayCat) => {
-  arrayCat.forEach((item) => {
-    const optionValue = document.createElement("option");
-    optionValue.textContent = item.name;
-    optionValue.setAttribute("value", item.id);
-    select.appendChild(optionValue);
-  });
 };

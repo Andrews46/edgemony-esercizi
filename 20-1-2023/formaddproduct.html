@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styleform.css">
+    <script src="./scriptform.js"></script>
+  </head>
+  <body>
+    <a class="home" href="index.html">Home</a>
+    <h1 class="title">Scegli i prodotti attraverso il form</h1>
+    <div class="formProduct">
+      
+    <div class="containForm">
+        <form id="postForm">
+          <div class="formProduct">
+            <label id="titleModifica" for="title">Aggiungi o Modifica:</label>
+            <select required>
+              <option value="POST">Aggiungi</option>
+              <option value="PUT">Modifica</option>
+            </select>
+          </div>
+          <div class="formProduct">
+            <label id="titles"for="titles"
+              >Titolo
+              <input class="titolo" type="text" required />
+            </label>
+          </div>
+          <div class="formProduct">
+            <label id="prices"for="price"
+              >Prezzo
+              <input class="price" type="number" required />
+            </label>
+          </div>
+          <div class="formProduct">
+            <label id="category" for="categorys"
+              >Categoria
+              <input class="categorys" type="number" required />
+            </label>
+          </div>
+          <div class="formProduct">
+            <label id="images"for="immagine"
+              >Immagine<input
+                class="image"
+                type="text"
+                placeholder="put an correct URL image"
+                required
+              />
+            </label>
+          </div>
+          <div class="formProduct">
+            <label id ="descr" for="text"
+              >Descrizione
+              <textarea class="descriptions" type="text" required></textarea>
+            </label>
+          </div>
+          <input class="submit" type="submit" value="submit" />
+        </form>
+      </div>
+  </body>
+</html>

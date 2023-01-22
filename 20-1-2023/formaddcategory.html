@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styleform.css" />
+    <script src="./scriptform.js" type="module"></script>
+  </head>
+  <body>
+    <a href="index.html">Home</a>
+    <h2>Inserisci le tue categorie preferite</h2>
+    <div class="formCategories">
+      <form class="categoryForm">
+        <div class="categories">
+          <label id="namesCat" for="name">Categoria Nome:</label>
+          <input name="name" type="text" class="categoryName" required />
+        </div>
+        <div class="categories">
+          <label id="catImage" for="image">Categoria Immagine:</label>
+          <input name="image" type="url" class="categoryImage" required />
+        </div>
+        <input class="submit" type="submit" value="submit" />
+      </form>
+    </div>
+  </body>
+</html>

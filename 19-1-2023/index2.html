@@ -16,14 +16,22 @@
         <img
           id="img-1"
           class="show"
-          src="tendenze-ecommerce-2021-digitaltown.png"
+          src="./immagini/tendenze-ecommerce-2021-digitaltown.png"
           alt="alt images"
         />
       </div>
     </header>
     <h2 class="title">Form per compilare lista prodotti</h2>
+
     <div class="form1">
-      <form action="postForm">
+      <form id="postForm">
+        <div class="formGroup">
+          <label for="title">Aggiungi o Modifica:</label>
+          <select required>
+            <option value="POST">Aggiungi</option>
+            <option value="PUT">Modifica</option>
+          </select>
+        </div>
         <div class="formProduct">
           <label for="titles"
             >Titolo
@@ -86,6 +94,16 @@
           />
         </div>
         <input class="submit" type="submit" value="submit" />
+      </form>
+    </div>
+    <h2>Form per eliminare</h2>
+    <div class="form3">
+      <form class="eliminaForm">
+        <div class="deleteForm">
+          <label for="name">Product Id</label>
+          <input name="name" type="text" id="productId" required />
+        </div>
+        <input type="submit" value="submit" />
       </form>
     </div>
   </body>

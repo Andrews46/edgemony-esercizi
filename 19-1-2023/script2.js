@@ -1,4 +1,5 @@
-const formSubmit = document.querySelector("form");
+import { functionForm, elimina } from "./fetch.js";
+const formSubmit = document.querySelector("#postForm");
 const formTitle = document.querySelector(".titles");
 const formDescription = document.querySelector(".descriptions");
 const formPrice = document.querySelector(".price");
@@ -8,16 +9,18 @@ const formImage = document.querySelector(".image");
 const formCategory2 = document.querySelector(".categoryForm");
 const formCatName = document.querySelector(".categoryName");
 const formCatImage = document.querySelector(".categoryImage");
-const formSport = document.querySelector(".categorySport");
-const formAutoMoto = document.querySelector(".categoryAutoMoto");
+// const formSport = document.querySelector(".categorySport");
+// const formAutoMoto = document.querySelector(".categoryAutoMoto");
+const deleteProductForm = document.querySelector(".form3");
+const inputIdProduct = document.querySelector("#productId");
 formCategory2.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const newObj = {
     name: formCatName.value,
     image: formCatImage.value,
-    sport: formSport.value,
-    automoto: formAutoMoto.value,
+    // sport: formSport.value,
+    // automoto: formAutoMoto.value,
   };
   console.log(newObj);
   functionForm(newObj, "categories");
@@ -25,6 +28,13 @@ formCategory2.addEventListener("submit", (event) => {
 
 formSubmit.addEventListener("submit", (event) => {
   event.preventDefault();
+  const method = event.target[0].value;
+  const idProduct = "/" + event.target[1].value;
+
+  if (parseInt(formCategory.value) < 1) {
+    alert("la categoria deve essere maggiore di 0");
+    return;
+  }
 
   const addSubmit = {
     title: formTitle.value,
@@ -33,18 +43,13 @@ formSubmit.addEventListener("submit", (event) => {
     categoryId: parseInt(formCategory.value),
     images: [formImage.value],
   };
-  functionForm(addSubmit, "product");
+  if (method === "POST") {
+    funzionePost(newObj, "products", method);
+  } else {
+    functionForm(addSubmit, "products", method, idProduct);
+  }
 });
-
-const functionForm = (objBody, newObj) => {
-  fetch("https://api.escuelajs.co/api/v1/" + newObj, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(objBody, newObj),
-  })
-    .then((res) => res.json())
-    .then((data) => console.log("RISPOSTA POST: ", data))
-    .catch((e) => console.log("ERRORE: ", e));
-};
+deleteProductForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  elimina("products", inputIdProduct.value);
+});
