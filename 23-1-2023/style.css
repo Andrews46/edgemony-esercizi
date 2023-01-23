@@ -1,0 +1,29 @@
+body {
+  background-color: darkcyan;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.product-card {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  box-shadow: 0 0 4px rgba(135, 133, 133, 0.35);
+  border-radius: 12px;
+}
+
+.product-card img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.product-card__text {
+  display: flex;
+  flex-direction: column;
+}
