@@ -1,27 +1,36 @@
+import { GET } from "./api.js";
+
 const cE = (type) => document.createElement(type);
 const qS = (element) => document.querySelector(element);
-const productCard = (data) => {
-  const wrapperEl = cE("div");
-  const textWrapperEl = cE("div");
-  const imageEl = cE("img");
-  const quoteEl = cE("p");
+const quoteCard = (data) => {
+  const quoteEl = cE("div");
+  const quoteTextEl = cE("p");
   const authorEl = cE("h3");
 
-  wrapperEl.className = "product-quotes";
-  wrapperEl.className = "product-card";
-  imageEl.setAttribute("src", data.thumbnail);
-  imageEl.setAttribute("alt", data.title);
-  textWrapperEl.className = "product-quotes__text";
+  quoteEl.className = "quote";
+  quoteEl.setAttribute("id", data.id);
+  quoteTextEl.textContent = data.quote;
   authorEl.textContent = data.author;
-  quoteEl.textContent = data.quotes;
 
-  textWrapperEl.append(authorEl, quoteEl);
-  wrapperEl.append(imageEl, textWrapperEl);
+  quoteEl.append(quoteTextEl, authorEl);
 
-  return wrapperEl;
+  return quoteEl;
 };
+const onBtnClick = () => {
+  document.querySelector(".quote")?.remove();
+  randomIndex = Math.floor(Math.random() * 30);
 
-// const btn = document.querySelector(".btnRandom");
-// btnRandom.addEventListener("click", () => {});
+  GET(`quotes/${randomIndex + 1}`).then((quote) =>
+    bodyEl.appendChild(quoteCard(quote))
+  );
+};
+let randomIndex = Math.floor(Math.random() * 30);
+const bodyEl = document.body;
+const quoteBtnEl = document.createElement("button");
 
-export { cE, qS, productCard };
+quoteBtnEl.className = "btn-quote";
+quoteBtnEl.textContent = "Generate";
+bodyEl.appendChild(quoteBtnEl);
+
+quoteBtnEl.addEventListener("click", onBtnClick);
+export { cE, qS, quoteCard };
