@@ -30,3 +30,7 @@ p {
   flex-direction: row-reverse;
   align-items: baseline;
 }
+
+img {
+  border: 2px solid red;
+}
