@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(57, 112, 112);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+}
+.contain {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 8px 14px 10px gray;
+  border-radius: 12px;
+  background-color: rgb(162, 214, 214);
+  width: 250px;
+  height: 320px;
+  gap: 20px;
+}
+h3 {
+  text-align: center;
+  color: blue;
+}
+p {
+  text-align: justify;
+  padding: 20px;
+  color: rgb(1, 52, 1);
+}
+.ul {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: baseline;
+}
+
+img {
+  border: 2px solid red;
+}
