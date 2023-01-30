@@ -9,24 +9,11 @@ const topRatedEl = qS(".top-rated");
 const modalEl = qS(".modal");
 const modalOverlay = qS(".overlay");
 
-Promise.all([GET("popular"), GET("top_rated")])
-  .then((data) => {
-    data[0].results.map((movie) => popularEl.append(createCardGen(movie)));
-    data[1].results.map((movie) => topRatedEl.append(createCardGen(movie)));
-    console.log(document.querySelectorAll(".movie"));
-  })
-  .then(() => {
-    const movieEls = qSA(".movie");
-    console.log(movieEls);
-    movieEls.forEach((movie) =>
-      movie.addEventListener("click", () =>
-        GET("movie", movie.id).then((selectedMovie) => {
-          modalEl.appendChild(modalGen(selectedMovie));
-          modalEl.style.display = "flex";
-        })
-      )
-    );
-  });
+Promise.all([GET("popular"), GET("top_rated")]).then((data) => {
+  data[0].results.map((movie) => popularEl.append(createCardGen(movie)));
+  data[1].results.map((movie) => topRatedEl.append(createCardGen(movie)));
+  console.log(document.querySelectorAll(".movie"));
+});
 modalOverlay.addEventListener("click", () => {
   const modalMovieEl = qS(".movie-modal");
   modalEl.style.display = "none";
