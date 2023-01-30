@@ -94,3 +94,6 @@ img {
   height: 380px;
   object-fit: cover;
 }
+.titleModal {
+  color: darkblue;
+}
