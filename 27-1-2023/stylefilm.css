@@ -1,0 +1,9 @@
+.titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.movie {
+  width: 300px;
+  border: 2px solid;
+}
