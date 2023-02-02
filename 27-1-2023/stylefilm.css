@@ -1,9 +1,28 @@
+.popular {
+  display: flex;
+  gap: 25px;
+  padding: 40px;
+  overflow-x: auto;
+}
+.top-rated {
+  display: flex;
+  gap: 25px;
+  padding: 40px;
+  overflow-x: auto;
+}
 .titles {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .movie {
+  display: flex;
+  height: 340px;
   width: 300px;
-  border: 2px solid;
+}
+.images {
+  border-radius: 12px;
+}
+h1 {
+  text-align: center;
 }

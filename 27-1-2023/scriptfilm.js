@@ -10,6 +10,7 @@ const createCardGenerator = (data) => {
   const cardEl = cE("div");
   const imgEl = cE("img");
   cardEl.className = "movie";
+  imgEl.className = "images";
   imgEl.setAttribute(
     "src",
     `https://image.tmdb.org/t/p/w500/${data.poster_path}`
