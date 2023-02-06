@@ -1,0 +1,45 @@
+{
+  "book ": [
+    {
+      "id": 1,
+      "titolo": "Libro_primo_le_cronache_del_ghiaccio_e_del_fuoco",
+      "author": "George_R_R_Martin",
+      "genere": "fantasy",
+      "prezzo": 25
+    },
+    {
+      "id": 2,
+      " titolo": "Libro_secondo_le_cronache_del_ghiaccio_e_del_fuoco",
+      " author": "George_R_R_Martin",
+      "genere": "fantasy",
+      "prezzo": 25
+    },
+
+    {
+      "id": 3,
+      "titolo": "Fuoco_e_sangue",
+      "author": "George_R_R_Martin",
+      "genere": "fantasy",
+      "prezzo": 25
+    },
+    {
+      "id": 4,
+      "titolo": "Inferno",
+      "author": "Dan_Brown",
+      "genere": "fantasy-Thriller",
+      "prezzo": 20
+    },
+    {
+      "id": 5,
+      "titolo": "La_verità_del_ghiaccio",
+      "author": "Dan_Brown",
+      "prezzo": 20
+    },
+    {
+      "id": 6,
+      "titolo": "La_bambina_che_amava_Tom_Gordon",
+      "author": "Stephen_king",
+      "prezzo": 16
+    }
+  ]
+}
