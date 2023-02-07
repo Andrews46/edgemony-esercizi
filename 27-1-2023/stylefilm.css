@@ -31,3 +31,18 @@ h2 {
   text-align: center;
   color: yellow;
 }
+.final {
+  border: 2px solid red;
+  margin: 20px;
+  padding: 20px;
+  height: 400px;
+}
+ul {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-bottom: 16px;
+  min-width: 100px;
+  padding: 12px;
+  vertical-align: top;
+  color: rgb(250, 241, 165);
+}
