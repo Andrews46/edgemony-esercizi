@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{titolo}}</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <h1>Presentazione di {{nome}} {{cognome}}</h1>
+    <h2>Il mio pet preferito è : {{pet}}</h2>
+    <h2>La mia serie preferita è : {{season}}</h2>
+    <h2>Il mio colore preferito è: {{color}}</h2>
+
+    <form action="/presentazione" method="POST">
+      <label>Indica il tuo nome</label>
+      <input type="text" name="name" placeholder="nome" />
+      <button type="submit">Invia</button>
+    </form>
+
+  </body>
+</html>
