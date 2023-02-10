@@ -6,7 +6,7 @@ const PORT = 4000;
 const myPreferences = {
   pet: "cane-jack russel",
   color: "chartreuse",
-  season: "Game of thrones",
+  season: "primavera",
 };
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
