@@ -1,0 +1,22 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Fai il login per accedere</h2>
+
+    {{#if message}}
+      <h3>{{message}}</h3>
+    {{/if}}
+
+    <form action="/signup" method="POST">
+      <input type="text" name="name" placeholder="nome" />
+      <input type="password" name="password" placeholder="password" />
+      <button type="submit">Entra</button>
+    </form>
+    <a href="/logout">Vuoi fare logout? Clicca qui</a>
+  </body>
+</html>
