@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "63eba7a302b8307f1788f118"
+  },
+  "titolo": "Game of Thrones",
+  "stagioni": "8",
+  "categoria": "fantasy ecc",
+  "episodi": "73"
+},{
+  "_id": {
+    "$oid": "63ebaf509a383ce2bc395e6d"
+  },
+  "titolo": "Smallville",
+  "stagioni": "10",
+  "categoria": "fantascienza/azione",
+  "episodi": "217"
+},{
+  "_id": {
+    "$oid": "63ebb1279a383ce2bc395e6e"
+  },
+  "titolo": "The 100",
+  "stagioni": "7",
+  "categoria": "fantascienza/avventura",
+  "episodi": "1"
+},{
+  "_id": {
+    "$oid": "63ebb1279a383ce2bc395e6f"
+  },
+  "titolo": "Arrow",
+  "stagioni": "8",
+  "categoria": "azione/avventura",
+  "episodi": "170"
+},{
+  "_id": {
+    "$oid": "63ebb1279a383ce2bc395e70"
+  },
+  "titolo": "X-files",
+  "stagioni": "11",
+  "categoria": "Fantascienza/Thriller",
+  "episodi": "218"
+}]
