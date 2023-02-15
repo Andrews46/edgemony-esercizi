@@ -2,7 +2,7 @@ const { Collection } = require("mongodb");
 
 const MongoClient = require("mongodb").MongoClient;
 let url =
-  "mongodb+srv://Andrea:Rossi46@cluster0.e6ou1m6.mongodb.net/school/retryWrites=true";
+  "mongodb+srv://Andrea:V96oxA08nOHMP6k2@cluster0.e6ou1m6.mongodb.net/school/retryWrites=true";
 //connessione al database
 MongoClient.connect(url)
   .then((db) => {
