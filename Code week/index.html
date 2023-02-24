@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App metereologica</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      size="32x32"
+      href="./immagini/favicon.png"
+    />
+    <script src="./script.js" type="module"></script>
+  </head>
+  <body>
+    <nav>
+      <h1 class="title">Meteo Palermo e provincia</h1>
+      <form action="name">
+        <label for="Meteo">Scegli la tua località : </label>
+        <select class="sel_city" name="text" id="city">
+          <option class="comuni" value=""></option>
+        </select>
+      </form>
+    </nav>
+    <div class="container">
+      <div>
+        <h1 class="name"></h1>
+        <img class="puntatore" src="./immagini/OIP.jfif" size="32x32" alt="" />
+      </div>
+      <div class="imgIcon"><img class="icon" src="" alt="" /></div>
+      <div class="temperatura">
+        <h2>--</h2>
+      </div>
+      <div class="temp-min"></div>
+      <div class="temp-max"></div>
+      <div class="tempHumidity"></div>
+      <div class="weather">
+        <p class="descrizione"></p>
+      </div>
+      <div class="coord">
+        <div class="lat"></div>
+        <div class="lon"></div>
+      </div>
+      <div class="wind"></div>
+    </div>
+  </body>
+</html>
