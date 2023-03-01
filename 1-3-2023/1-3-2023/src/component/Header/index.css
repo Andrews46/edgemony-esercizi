@@ -1,0 +1,15 @@
+a {
+  border: 2px solid;
+  height: 40px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  left: 25%;
+  border-radius: 6px;
+}
+.header {
+  padding: 10px;
+}
