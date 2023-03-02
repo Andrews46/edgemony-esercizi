@@ -1,9 +1,9 @@
 import Header from "./component/Header/Header";
-import Footer from "./component/Footer/Footer";
 import { productsList } from "./Mocks/productsList";
 import Control from "./component/Control";
 import Gallery from "./component/Gallery";
 import ListProducts from "./component/listProducts/ListProducts";
+import Footer from "./component/Footer/Footer";
 import "./App.css";
 
 const App = () => {

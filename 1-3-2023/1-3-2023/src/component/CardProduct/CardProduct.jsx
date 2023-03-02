@@ -1,9 +1,11 @@
 import Button from "../Button";
 import "./index.css";
+// import { images } from ".images/images";
 
 const CardProduct = ({ productData }) => {
   const onGetStock = () => alert(`${productData.stock}prodotti disponibili`);
-  const onImageClick = () => window.open(productData.image[1], "_self");
+
+  const onImageClick = () => window.open(productData.images[1], "_self");
   return (
     <div
       className="CardProduct"
@@ -21,7 +23,7 @@ const CardProduct = ({ productData }) => {
         <hr />
         <p>{productData.brand}</p>
         <p>Sconto del {productData.discountPercentage}%</p>
-        {<button onClick={onGetStock}>Click</button>}
+
         <Button text="Disponibilità" clickFunc={onGetStock} />
       </div>
     </div>
