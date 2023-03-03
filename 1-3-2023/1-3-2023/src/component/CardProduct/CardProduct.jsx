@@ -1,30 +1,24 @@
-import Button from "../Button";
 import "./index.css";
 // import { images } from ".images/images";
 
-const CardProduct = ({ productData }) => {
-  const onGetStock = () => alert(`${productData.stock}prodotti disponibili`);
+const CardProduct = ({ productData, setSingleProductModel }) => {
+  // const onGetStock = () => alert(`${productData.stock}prodotti disponibili`);
 
-  const onImageClick = () => window.open(productData.images[1], "_self");
+  const onImageClick = () => {
+    setSingleProductModel(() => productData);
+  };
   return (
-    <div
-      className="CardProduct"
-      style={{
-        backgroundColor: `rgba(${
-          12 * productData.discountPercentage
-        }, 10, 4, 0.4)`,
-      }}
-    >
-      <img onClick={onImageClick} src={productData.thumbnail} alt="Apple" />
+    <div className="CardProduct">
+      <img
+        onClick={onImageClick}
+        src={`https://image.tmdb.org/t/p/w500` + productData.backdrop_path}
+        alt="Apple"
+      />
       <div className="CardProduct__text-content">
-        <h4>{productData.title}</h4>
-        <p>{productData.description}</p>
-        <p>{productData.price} $</p>
+        <h4>{productData.name}</h4>
+        <p className="desc">{productData.overview}</p>
+        <p>{productData.vote_average} </p>
         <hr />
-        <p>{productData.brand}</p>
-        <p>Sconto del {productData.discountPercentage}%</p>
-
-        <Button text="Disponibilità" clickFunc={onGetStock} />
       </div>
     </div>
   );

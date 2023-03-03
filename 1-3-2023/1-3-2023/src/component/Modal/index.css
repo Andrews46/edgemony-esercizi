@@ -1,0 +1,23 @@
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+}
+.Modal__content {
+  width: 500px;
+  height: 300px;
+  background-color: aquamarine;
+  border-radius: 12px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+}
+.Modal__btn {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}

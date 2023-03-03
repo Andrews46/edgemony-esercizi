@@ -11,7 +11,7 @@ const Gallery = () => {
     }
   };
   const indietro = () => {
-    if (changeImage > images.length + 1) {
+    if (changeImage > 0) {
       setchangeImage(changeImage - 1);
     }
   };
@@ -21,7 +21,7 @@ const Gallery = () => {
 
       <div className="btn">
         <button onClick={() => avanti()}>{">"}</button>
-        <button onclick={() => indietro()}>{"<"}</button>
+        <button onClick={() => indietro()}>{"<"}</button>
       </div>
     </div>
   );
