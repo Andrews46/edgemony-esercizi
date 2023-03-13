@@ -4,7 +4,7 @@ const Button = ({ text, clickFunc, isDisabled = false }) => {
   return (
     <button
       className={`Button ${isDisabled ? "disabled" : null}`}
-      onclick={clickFunc}
+      onClick={clickFunc}
       disabled={isDisabled}
     >
       {text}

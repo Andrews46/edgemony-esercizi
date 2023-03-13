@@ -7,7 +7,10 @@ const Modal = ({ setModalOpen }) => {
       <div className="Modal__content">
         <h3>Salve, se vuoi continuare, accetta</h3>
         <div className="Modal__btn">
-          <Button text="Annulla" clickFunc={() => "Se non accetti non entri"} />
+          <Button
+            text="Annulla"
+            clickFunc={() => alert("Se non accetti non entri")}
+          />
           <Button
             text="Accetta"
             clickFunc={() => setModalOpen((prev) => false)}

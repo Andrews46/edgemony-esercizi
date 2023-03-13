@@ -1,5 +1,5 @@
 import "./index.css";
-// import { images } from ".images/images";
+// import ImageProducts from "../ImageProducts";
 
 const CardProduct = ({ productData, setSingleProductModel }) => {
   // const onGetStock = () => alert(`${productData.stock}prodotti disponibili`);
