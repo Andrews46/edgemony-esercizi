@@ -8,3 +8,8 @@
   border-radius: 6px;
   padding: 10px;
 }
+
+li:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 255, 0.793);
+}

@@ -10,8 +10,8 @@ const Content = () => {
   ]);
   const [newList, setNewList] = useState("");
 
-  const handleChange = (event) => {
-    setNewList(event.target.value);
+  const handleChange = (e) => {
+    setNewList(e.target.value);
   };
 
   const handleAdd = () => {
@@ -21,12 +21,18 @@ const Content = () => {
     }
   };
 
+  const removeList = () => {
+    setTodoList([todoList].splice());
+  };
+
   return (
     <div className="Content">
       <h1>Es List</h1>
       <ul>
         {todoList.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li onClick={removeList} key={index}>
+            {item}
+          </li>
         ))}
       </ul>
       <input type="text" value={newList} onChange={handleChange} />
