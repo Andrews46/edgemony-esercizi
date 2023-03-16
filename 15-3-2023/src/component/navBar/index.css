@@ -35,11 +35,11 @@
 
 .Navbar input {
   margin-bottom: 20px;
-  width: 300px;
+  width: 500px;
   padding: 12px 24px;
   border: 0;
   border-radius: 6px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.55);
   outline: none;
 }
 .NavBar_cart {
@@ -52,6 +52,6 @@
 }
 .NavBarLength {
   position: absolute;
-  top: 14px;
-  right: 16px;
+  top: 6px;
+  right: 50px;
 }

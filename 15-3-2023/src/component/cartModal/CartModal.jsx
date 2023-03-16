@@ -1,16 +1,19 @@
 import "./index.css";
 import { GiShoppingCart } from "react-icons/gi";
 const CartModal = ({ productData, setModalCart }) => {
-  const onHandleClickModal = () =>
+  const onHandleCloseModal = () =>
     setModalCart(() => ({
-      isVisible: false,
+      visible: false,
       productData,
     }));
 
   return (
     <div className="CartModal">
-      <div className="Cart_Modal_content">
+      <div className="Cart_Modal_content" onClick={onHandleCloseModal}>
         <div className="Cart_Modal_text">
+          {/* {productData.title.map((title) => (
+            <h1>{title}</h1>
+          ))} */}
           <h1>{productData.title}</h1>
           <p>{productData.description}</p>
         </div>
@@ -20,7 +23,7 @@ const CartModal = ({ productData, setModalCart }) => {
         </div>
       </div>
       <p className="cartmodal">
-        <GiShoppingCart onClick={onHandleClickModal} className="cartmodal" />
+        <GiShoppingCart className="cartmodal" />
       </p>
     </div>
   );

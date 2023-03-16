@@ -11,7 +11,7 @@ const Navbar = ({ cartListLength, setModalCart }) => {
     e.preventDefault();
   };
   const onClickModalCart = () => {
-    setModalCart((prev) => ({ ...prev, isVisible: false }));
+    setModalCart((prev) => ({ ...prev, visible: true }));
   };
   return (
     <div className="Navbar">
@@ -29,10 +29,8 @@ const Navbar = ({ cartListLength, setModalCart }) => {
           required
         />
       </form>
-      <p className="NavBarLength">
-        <GiShoppingCart onClick={onClickModalCart} className="NavBar_cart" />
-        {cartListLength}
-      </p>
+      <p className="NavBarLength">{cartListLength}</p>
+      <GiShoppingCart onClick={onClickModalCart} className="NavBar_cart" />
     </div>
   );
 };
