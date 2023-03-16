@@ -3,7 +3,7 @@ import { GET } from "../../utils/http";
 import Card from "../card";
 import "./index.css";
 
-const CardList = ({ title, endpoint }) => {
+const CardList = ({ title, endpoint, setModalContext }) => {
   const [productsList, setProductsList] = useState([]);
 
   useEffect(() => {
@@ -14,7 +14,11 @@ const CardList = ({ title, endpoint }) => {
       <h2>{title}</h2>
       <div className="CardList__list">
         {productsList.map((product) => (
-          <Card productData={product} key={product.id} />
+          <Card
+            productData={product}
+            setModalContext={setModalContext}
+            key={product.id}
+          />
         ))}
       </div>
     </div>

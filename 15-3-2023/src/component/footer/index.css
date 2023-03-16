@@ -1,0 +1,25 @@
+.Footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  background-image: linear-gradient(
+    to right top,
+    #015de7,
+    #009bff,
+    #00c7ea,
+    #00e98d,
+    #b5fb17
+  );
+}
+.Footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+.Footer ul li:hover {
+  color: #0a01fd;
+}

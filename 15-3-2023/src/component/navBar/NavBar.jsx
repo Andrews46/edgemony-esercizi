@@ -1,16 +1,18 @@
 import { useState } from "react";
+import { GiShoppingCart } from "react-icons/gi";
 import "./index.css";
 
-const Navbar = () => {
+const Navbar = ({ cartListLength, setModalCart }) => {
   const [inputValue, setInputValue] = useState("");
 
   const onHandleInput = (e) => setInputValue(() => e.target.value);
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    // TODO: trasmettere il valore della input (inputValue) all'elemento di ricerca
   };
-
+  const onClickModalCart = () => {
+    setModalCart((prev) => ({ ...prev, isVisible: false }));
+  };
   return (
     <div className="Navbar">
       <ul>
@@ -27,6 +29,10 @@ const Navbar = () => {
           required
         />
       </form>
+      <p className="NavBarLength">
+        <GiShoppingCart onClick={onClickModalCart} className="NavBar_cart" />
+        {cartListLength}
+      </p>
     </div>
   );
 };

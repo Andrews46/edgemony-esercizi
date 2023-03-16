@@ -42,3 +42,16 @@
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
   outline: none;
 }
+.NavBar_cart {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  color: rgb(224, 249, 3);
+  font-size: 2rem;
+  cursor: pointer;
+}
+.NavBarLength {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+}
