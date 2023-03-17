@@ -9,7 +9,9 @@ import CartModal from "./component/cartModal";
 import "./App.css";
 
 function App() {
-  const [cartList, setCartList] = useState([]);
+  const [cartList, setCartList] = useState(
+    JSON.parse(localStorage.getItem("cartList")) || []
+  );
   const [modalContext, setModalContext] = useState({
     productData: {},
     isVisible: false,
@@ -40,6 +42,7 @@ function App() {
         <CartModal
           productData={modalCart.productData}
           setModalCart={setModalCart}
+          cartList={cartList}
         />
       )}
       {modalContext.isVisible && (

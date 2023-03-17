@@ -1,14 +1,17 @@
 .Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(
-    to right top,
-    #015de7,
-    #009bff,
-    #00c7ea,
-    #00e98d,
-    #b5fb17
+  height: 120px;
+  width: 100%;
+  background: rgb(138, 141, 147);
+  background: linear-gradient(
+    170deg,
+    rgba(138, 141, 147, 1) 0%,
+    rgba(2, 0, 66, 1) 100%
   );
 }
 
@@ -51,7 +54,10 @@
   cursor: pointer;
 }
 .NavBarLength {
+  color: rgb(224, 249, 3);
   position: absolute;
-  top: 6px;
+  font-size: 20px;
+
+  top: 4px;
   right: 50px;
 }
