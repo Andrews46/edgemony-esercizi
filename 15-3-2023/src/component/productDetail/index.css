@@ -42,8 +42,8 @@
 }
 .ProductDetail_close {
   position: absolute;
-  top: 20px;
-  right: 60px;
+  top: 110px;
+  right: 150px;
   font-size: 1.2rem;
   color: chartreuse;
   background-color: rgba(0, 0, 252, 0.348);
@@ -57,8 +57,8 @@
 }
 .ProductDetail--cart {
   position: fixed;
-  bottom: 6%;
-  right: 6%;
+  bottom: 15%;
+  right: 18%;
   width: 60px;
   height: 60px;
   border-radius: 100%;
@@ -72,4 +72,8 @@
 
 .ProductDetail--cart:hover {
   transform: scale(1.2);
+}
+.title_add_cart {
+  display: flex;
+  justify-content: space-around;
 }

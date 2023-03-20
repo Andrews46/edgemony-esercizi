@@ -1,0 +1,15 @@
+.Hero {
+  padding: 0;
+
+  .Hero_image {
+    margin: 0;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  .Hero_lista {
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+}

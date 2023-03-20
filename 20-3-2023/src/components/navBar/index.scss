@@ -1,0 +1,9 @@
+.NavBar {
+  .NavBar_lista {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 22px;
+    cursor: pointer;
+  }
+}

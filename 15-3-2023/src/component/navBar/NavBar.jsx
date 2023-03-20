@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { GiShoppingCart } from "react-icons/gi";
+import { GrSearch } from "react-icons/gr";
 import "./index.css";
 
-const Navbar = ({ cartListLength, setModalCart }) => {
+const Navbar = ({ cartListLength, setModalCart, setSearchInputValue }) => {
   const [inputValue, setInputValue] = useState("");
 
   const onHandleInput = (e) => setInputValue(() => e.target.value);
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
+    setSearchInputValue(() => inputValue);
   };
   const onClickModalCart = () => {
     setModalCart((prev) => ({ ...prev, visible: true }));

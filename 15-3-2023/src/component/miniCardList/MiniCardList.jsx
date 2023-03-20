@@ -3,11 +3,13 @@ import MiniCard from "../miniCard";
 import { GET } from "../../utils/http";
 import "./index.css";
 
-const MiniCardList = () => {
+const MiniCardList = ({ searchInputValue }) => {
   const [cardMini, setCardMini] = useState([]);
   useEffect(() => {
-    GET("/products").then((data) => setCardMini(() => data.products));
-  }, []);
+    GET(
+      searchInputValue ? `/products/category/${searchInputValue}` : "/products"
+    ).then((data) => setCardMini(() => data.products));
+  }, [searchInputValue]);
 
   return (
     <div className="MiniCardList">
