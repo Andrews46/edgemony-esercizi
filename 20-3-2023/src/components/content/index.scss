@@ -1,5 +1,5 @@
+@import "../../styles/mixins";
+
 .Content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  @include flex-container(row, flex-start, column, 20px, wrap);
 }

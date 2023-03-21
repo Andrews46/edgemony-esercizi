@@ -1,6 +1,17 @@
 import "./index.scss";
 
-const Hero = () => {
+const Hero = ({ data, setCategory }) => {
+  const obj = [
+    { id: 1, textcontent: "Ordinary Drink", key: "Cocktail" },
+    { id: 2, textcontent: "Cocktail", key: "Shot" },
+    { id: 3, textcontent: "Shot", key: "Ordinary Drink" },
+    { id: 4, textcontent: "Punch", key: "Other / Unknown" },
+    { id: 5, textcontent: "Coffee", key: "Punch / Party Drink" },
+    { id: 6, textcontent: "Other", key: "Coffee / Tea" },
+  ];
+  const onHandleClick = (value) => {
+    setCategory(value);
+  };
   return (
     <div className="Hero">
       <h1>Lista Cocktail </h1>
@@ -10,12 +21,12 @@ const Hero = () => {
         alt="image"
       />
       <ul className="Hero_lista">
-        <li>Ordinary Drink</li>
-        <li>Cocktail</li>
-        <li>Shot</li>
-        <li>Punch</li>
-        <li>Coffee</li>
-        <li>Other</li>
+        <li onClick={() => onHandleClick("Ordinary Drink")}>Ordinary Drink</li>
+        <li onClick={() => onHandleClick("Cocktail")}>Cocktail</li>
+        <li onClick={() => onHandleClick("Shot")}>Shot</li>
+        <li onClick={() => onHandleClick("Punch / Party Drink")}>Punch</li>
+        <li onClick={() => onHandleClick("Beer")}>Birra</li>
+        <li onClick={() => onHandleClick("Other / Unknown")}>Altro</li>
       </ul>
     </div>
   );

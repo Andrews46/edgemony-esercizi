@@ -1,0 +1,19 @@
+.SingleItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .SingleItem_test {
+    width: 300px;
+    height: 300px;
+    border: 2px solid;
+  }
+  .SingleItem_image {
+    width: 300px;
+    height: 300px;
+    border: 2px solid;
+    .SingleItem_image-random {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}

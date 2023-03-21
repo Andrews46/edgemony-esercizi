@@ -1,12 +1,12 @@
-// import { useState, useEffect } from "react";
 import Card from "../card";
 import "./index.scss";
+import { filteredList } from "../../utils/funcs";
 
-const Content = ({ data }) => {
+const Content = ({ data, category, setContextItem }) => {
   return (
     <div className="Content">
-      {data.map((cocktail, index) => (
-        <Card data={cocktail} key={index} />
+      {filteredList(data, "strCategory", category).map((cocktail, index) => (
+        <Card data={cocktail} key={index} setContextItem={setContextItem} />
       ))}
     </div>
   );

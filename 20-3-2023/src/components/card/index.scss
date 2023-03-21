@@ -1,20 +1,26 @@
+@import "../../styles/variables";
 .Card {
   box-shadow: 2px 0 2px black;
-
+  border-radius: $primary-bord;
   .Card_image {
     width: 240px;
+    border-radius: $primary-bord;
   }
   .Card_Title_Cocktail {
-    font-weight: bold;
+    font-weight: $primary-test;
     text-align: center;
   }
   ul {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-family: $primary-font;
+    color: $secondary-color;
     list-style: none;
   }
   .card_ingrediente {
-    font-weight: bold;
+    font-weight: $primary-test;
     border-bottom: 1px solid;
     width: 100px;
+  }
+  .Card_test {
+    height: 150px;
   }
 }
