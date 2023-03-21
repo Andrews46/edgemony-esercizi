@@ -25,7 +25,7 @@ function App() {
       <NavBar />
       {contextItem.isVisible ? (
         <SingleItem
-          data={listCocktail.payload}
+          data={contextItem.payload}
           setContextItem={setContextItem}
         />
       ) : (

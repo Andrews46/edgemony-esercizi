@@ -1,12 +1,12 @@
 import "./index.scss";
 
 const SingleItem = ({ data, setContextItem }) => {
-  const onHandleClick = () => {
+  const onHandleClick = () =>
     setContextItem((prev) => ({
       ...prev,
       isVisible: false,
     }));
-  };
+  console.log(data);
 
   return (
     <div className="SingleItem">
@@ -18,6 +18,10 @@ const SingleItem = ({ data, setContextItem }) => {
           <li>{data.strIngredient3}</li>
           <li>{data.strIngredient4}</li>
         </ul>
+        <h2>Istruzioni</h2>
+        <ul>
+          <li>{data.strInstructionsIT}</li>
+        </ul>
         <button onClick={onHandleClick}>X</button>
       </div>
       <div className="SingleItem_image">
@@ -27,8 +31,10 @@ const SingleItem = ({ data, setContextItem }) => {
           alt={data.strDrink}
         />
       </div>
-      <button>Indietro</button>
-      <button>Avanti</button>
+      <div>
+        <button>Indietro</button>
+        <button>Avanti</button>
+      </div>
     </div>
   );
 };
