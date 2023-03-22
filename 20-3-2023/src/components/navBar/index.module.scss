@@ -1,0 +1,9 @@
+@import "../../styles/mixins";
+.NavBar {
+  .lista {
+    @include flex-container(row, space-around, center);
+
+    font-size: 22px;
+    cursor: pointer;
+  }
+}

@@ -3,14 +3,14 @@
 .Hero {
   padding: 0;
 
-  .Hero_image {
+  .image {
     margin: 0;
     width: 100%;
     height: 400px;
     object-fit: cover;
     border-radius: $primary-bord;
   }
-  .Hero_lista {
+  .lista {
     @include flex-container(row, space-around, center, 50px);
     cursor: pointer;
     color: $secondary-color;

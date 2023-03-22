@@ -4,8 +4,8 @@ import NavBar from "./components/navBar";
 import Hero from "./components/hero";
 import Content from "./components/content";
 import SingleItem from "./components/singleItem";
-
-import "./App.scss";
+import Footer from "./components/footer";
+import styles from "./App.module.scss";
 
 function App() {
   const [listCocktail, setListCocktail] = useState([]);
@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className={styles.App}>
       <NavBar />
       {contextItem.isVisible ? (
         <SingleItem
@@ -36,6 +36,7 @@ function App() {
             category={category}
             setContextItem={setContextItem}
           />
+          <Footer />
         </>
       )}
     </div>

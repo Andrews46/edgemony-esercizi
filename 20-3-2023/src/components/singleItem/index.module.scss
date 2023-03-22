@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  .SingleItem_test {
+  .text {
     width: 300px;
     height: 300px;
     border: 2px solid;
@@ -10,11 +10,11 @@
       list-style: none;
     }
   }
-  .SingleItem_image {
+  .image {
     width: 300px;
     height: 300px;
     border: 2px solid;
-    .SingleItem_image-random {
+    .imageRandom {
       width: 300px;
       height: 300px;
     }

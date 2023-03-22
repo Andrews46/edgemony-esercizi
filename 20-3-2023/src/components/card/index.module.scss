@@ -2,7 +2,7 @@
 .Card {
   box-shadow: 2px 0 2px black;
   border-radius: $primary-bord;
-  .Card_image {
+  .image {
     width: 240px;
     border-radius: $primary-bord;
   }
@@ -15,12 +15,12 @@
     color: $secondary-color;
     list-style: none;
   }
-  .card_ingrediente {
+  .ingrediente {
     font-weight: $primary-test;
     border-bottom: 1px solid;
     width: 100px;
   }
-  .Card_test {
+  .text {
     height: 150px;
   }
 }

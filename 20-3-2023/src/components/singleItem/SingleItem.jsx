@@ -1,4 +1,4 @@
-import "./index.scss";
+import styles from "./index.module.scss";
 
 const SingleItem = ({ data, setContextItem }) => {
   const onHandleClick = () =>
@@ -9,8 +9,8 @@ const SingleItem = ({ data, setContextItem }) => {
   console.log(data);
 
   return (
-    <div className="SingleItem">
-      <div className="SingleItem_test">
+    <div className={styles.SingleItem}>
+      <div className={styles.text}>
         <h2>Ingredienti</h2>
         <ul>
           <li>{data.strIngredient1}</li>
@@ -24,9 +24,9 @@ const SingleItem = ({ data, setContextItem }) => {
         </ul>
         <button onClick={onHandleClick}>X</button>
       </div>
-      <div className="SingleItem_image">
+      <div className={styles.image}>
         <img
-          className="SingleItem_image-random"
+          className={styles.imageRandom}
           src={data.strDrinkThumb}
           alt={data.strDrink}
         />

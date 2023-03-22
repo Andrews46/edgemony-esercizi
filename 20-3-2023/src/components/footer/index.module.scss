@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+.Footer {
+  h2 {
+    text-align: center;
+    color: $secondary-color;
+  }
+
+  .list {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    font-size: 1.2rem;
+    font-family: $primary-font;
+  }
+  h4 {
+    text-align: end;
+  }
+}

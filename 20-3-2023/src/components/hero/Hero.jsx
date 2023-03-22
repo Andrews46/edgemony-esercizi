@@ -1,4 +1,4 @@
-import "./index.scss";
+import styles from "./index.module.scss";
 
 const Hero = ({ data, setCategory }) => {
   const obj = [
@@ -13,14 +13,13 @@ const Hero = ({ data, setCategory }) => {
     setCategory(value);
   };
   return (
-    <div className="Hero">
-      <h1>Lista Cocktail </h1>
+    <div className={styles.Hero}>
       <img
-        className="Hero_image"
+        className={styles.image}
         src="https://caffedimilano.co.uk/wp-content/uploads/2021/06/cocktails-birmingham-1536x1024.jpg"
         alt="image"
       />
-      <ul className="Hero_lista">
+      <ul className={styles.lista}>
         <li onClick={() => onHandleClick("Ordinary Drink")}>Ordinary Drink</li>
         <li onClick={() => onHandleClick("Cocktail")}>Cocktail</li>
         <li onClick={() => onHandleClick("Shot")}>Shot</li>
