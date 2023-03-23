@@ -4,12 +4,16 @@ import NavBar from "./components/navBar";
 import Hero from "./components/hero";
 import Content from "./components/content";
 import SingleItem from "./components/singleItem";
+import Prenotazione from "./components/prenotazione";
+import Popup from "./components/popup";
 import Footer from "./components/footer";
 import styles from "./App.module.scss";
 
 function App() {
   const [listCocktail, setListCocktail] = useState([]);
   const [category, setCategory] = useState("");
+  const [visualPrenotazione, setVisualPrenotazione] = useState(false);
+  const [visualPopup, setVisualPopup] = useState(false);
   const [contextItem, setContextItem] = useState({
     isVisible: false,
     payload: {},
@@ -22,7 +26,7 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <NavBar />
+      <NavBar setVisualPrenotazione={setVisualPrenotazione} />
       {contextItem.isVisible ? (
         <SingleItem
           data={contextItem.payload}
@@ -36,6 +40,13 @@ function App() {
             category={category}
             setContextItem={setContextItem}
           />
+          {visualPrenotazione && (
+            <Prenotazione
+              setVisualPrenotazione={setVisualPrenotazione}
+              setVisualPopup={setVisualPopup}
+            />
+          )}
+          {visualPopup && <Popup setVisualPopup={setVisualPopup} />}
           <Footer />
         </>
       )}

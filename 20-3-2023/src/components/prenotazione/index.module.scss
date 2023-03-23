@@ -1,0 +1,31 @@
+.Prenotazione {
+  .overlay {
+    position: fixed;
+    top: 0;
+    width: 96vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.676);
+  }
+  .formPrenotazione {
+    position: fixed;
+    display: flex;
+    top: 20%;
+    left: 30%;
+    width: 500px;
+    height: 400px;
+    border-radius: 12px;
+    background-color: whitesmoke;
+    justify-content: center;
+    align-items: center;
+  }
+  h2 {
+    text-align: center;
+  }
+  .inputForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 300px;
+  }
+}

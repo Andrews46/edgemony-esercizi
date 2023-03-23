@@ -10,30 +10,34 @@ const SingleItem = ({ data, setContextItem }) => {
 
   return (
     <div className={styles.SingleItem}>
-      <div className={styles.text}>
-        <h2>Ingredienti</h2>
-        <ul>
-          <li>{data.strIngredient1}</li>
-          <li>{data.strIngredient2}</li>
-          <li>{data.strIngredient3}</li>
-          <li>{data.strIngredient4}</li>
-        </ul>
-        <h2>Istruzioni</h2>
-        <ul>
-          <li>{data.strInstructionsIT}</li>
-        </ul>
-        <button onClick={onHandleClick}>X</button>
-      </div>
-      <div className={styles.image}>
-        <img
-          className={styles.imageRandom}
-          src={data.strDrinkThumb}
-          alt={data.strDrink}
-        />
-      </div>
-      <div>
-        <button>Indietro</button>
-        <button>Avanti</button>
+      <div className={styles.Content}>
+        <div className={styles.text}>
+          <h2>Ingredienti</h2>
+          <ul>
+            <li>{data.strIngredient1}</li>
+            <li>{data.strIngredient2}</li>
+            <li>{data.strIngredient3}</li>
+            <li>{data.strIngredient4}</li>
+          </ul>
+          <h2>Istruzioni</h2>
+          <ul>
+            <li>{data.strInstructionsIT}</li>
+          </ul>
+          <button className={styles.close} onClick={onHandleClick}>
+            X
+          </button>
+        </div>
+        <div className={styles.image}>
+          <img
+            className={styles.imageRandom}
+            src={data.strDrinkThumb}
+            alt={data.strDrink}
+          />
+          <div className={styles.carousel}>
+            <button>Indietro</button>
+            <button>Avanti</button>
+          </div>
+        </div>
       </div>
     </div>
   );

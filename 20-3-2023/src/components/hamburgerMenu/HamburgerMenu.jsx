@@ -1,6 +1,6 @@
-import styles from "./index.module.scss";
-import { FiMenu } from "react-icons/fi";
 import { useState } from "react";
+import { FiMenu } from "react-icons/fi";
+import styles from "./index.module.scss";
 
 const HamburgerMenu = () => {
   const [menu, setMenu] = useState(false);
