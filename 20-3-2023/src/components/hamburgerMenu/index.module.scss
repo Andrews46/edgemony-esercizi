@@ -1,11 +1,26 @@
+@import "../../styles/variables";
 .HamburgerMenu {
   .Icon {
     font-size: 30px;
   }
+  .titleMenu {
+    padding: 10px;
+    color: $primary-color;
+  }
   .text {
+    color: $primary-color;
     position: absolute;
     width: 300px;
     height: 600px;
-    background-color: honeydew;
+    background-color: rgb(193, 196, 193);
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style-type: none;
+  }
+  button {
+    width: 80px;
   }
 }

@@ -12,10 +12,13 @@ const HamburgerMenu = () => {
       <FiMenu onClick={visulHamburgerMenu} className={styles.Icon} />
       {menu && (
         <div className={styles.text}>
-          <h2>Scegli Il Cocktail perfetto</h2>
-          <li>Cocktail analcolici </li>
-          <li>Cocktail speciali </li>
-          <li>I più gettonati</li>
+          <h2 className={styles.titleMenu}>Scegli Il Cocktail perfetto</h2>
+          <ul>
+            <li>Cocktail analcolici </li>
+            <li>Cocktail speciali </li>
+            <li>I più gettonati</li>
+            <button>Prenota</button>
+          </ul>
         </div>
       )}
     </div>

@@ -1,14 +1,22 @@
 @import "../../styles/variables";
 .Card {
-  box-shadow: 2px 0 2px black;
+  box-shadow: 2px 0 2px #676262;
   border-radius: $primary-bord;
+  cursor: pointer;
+  &:hover {
+    background-color: rgb(45, 38, 38);
+    transform: rotateY(50deg);
+    transition: all 0.25s;
+  }
   .image {
     width: 240px;
     border-radius: $primary-bord;
   }
-  .Card_Title_Cocktail {
+
+  .Title_Cocktail {
     font-weight: $primary-test;
     text-align: center;
+    color: $color-title;
   }
   ul {
     font-family: $primary-font;

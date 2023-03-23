@@ -25,13 +25,22 @@ const Prenotazione = ({ setVisualPrenotazione, setVisualPopup }) => {
           <h2>
             <em>Fai la tua Prenotazione</em>
           </h2>
+          <label htmlFor="text">
+            <em>Scrivi un cognome</em>
+          </label>
           <input
             type="text"
             placeholder="cognome"
             value={cognome}
             onChange={inputText}
           />
+          <label htmlFor="date">
+            <em>Scegli una data</em>
+          </label>
           <input type="date" value={data} onChange={inputData} />
+          <label htmlFor="time">
+            <em>Scegli l'ora</em>
+          </label>
           <input type="time" value={time} onChange={inputTime} />
           <input type="submit" />
         </form>
