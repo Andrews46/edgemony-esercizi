@@ -34,8 +34,8 @@ const SingleItem = ({ data, setContextItem }) => {
             alt={data.strDrink}
           />
           <div className={styles.carousel}>
-            <button>Indietro</button>
-            <button>Avanti</button>
+            <button className={styles.btnIndietro}>Indietro</button>
+            <button className={styles.btnAvanti}>Avanti</button>
           </div>
         </div>
       </div>

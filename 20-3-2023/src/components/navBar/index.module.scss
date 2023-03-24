@@ -22,5 +22,13 @@
   button:hover {
     background-color: $primary-color;
     color: $color-title;
+    transform: scale(1.2);
+  }
+}
+@media screen and (max-width: 800px) {
+  .NavBar {
+    .lista {
+      display: none;
+    }
   }
 }

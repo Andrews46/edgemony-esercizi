@@ -14,6 +14,7 @@ function App() {
   const [category, setCategory] = useState("");
   const [visualPrenotazione, setVisualPrenotazione] = useState(false);
   const [visualPopup, setVisualPopup] = useState(false);
+
   const [contextItem, setContextItem] = useState({
     isVisible: false,
     payload: {},
