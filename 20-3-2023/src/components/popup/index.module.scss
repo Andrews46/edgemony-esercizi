@@ -1,13 +1,16 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
 .Popup {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-container(row, center, center);
+
   .text {
     position: fixed;
-    top: 10px;
-
+    top: 50px;
+    text-align: center;
+    color: $color-title;
+    border-radius: $primary-bord;
     width: 300px;
     height: 200px;
-    background-color: whitesmoke;
+    background-color: $primary-color;
   }
 }

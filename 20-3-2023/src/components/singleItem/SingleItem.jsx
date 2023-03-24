@@ -6,7 +6,6 @@ const SingleItem = ({ data, setContextItem }) => {
       ...prev,
       isVisible: false,
     }));
-  console.log(data);
 
   return (
     <div className={styles.SingleItem}>

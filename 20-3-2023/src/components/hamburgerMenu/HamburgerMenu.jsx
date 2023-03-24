@@ -12,11 +12,15 @@ const HamburgerMenu = () => {
       <FiMenu onClick={visulHamburgerMenu} className={styles.Icon} />
       {menu && (
         <div className={styles.text}>
-          <h2 className={styles.titleMenu}>Scegli Il Cocktail perfetto</h2>
+          <p className={styles.titleMenu}>
+            Scegli la categoria che preferisci è fai il tuo ordine
+          </p>
           <ul>
-            <li>Cocktail analcolici </li>
+            <li>Ordinary Drink </li>
             <li>Cocktail speciali </li>
-            <li>I più gettonati</li>
+            <li>Shot</li>
+            <li>Birra</li>
+            <li>Altro</li>
             <button>Prenota</button>
           </ul>
         </div>

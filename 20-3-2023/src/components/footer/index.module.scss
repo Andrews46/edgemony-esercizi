@@ -15,8 +15,10 @@
     font-size: 1.2rem;
     font-family: $primary-font;
     color: $secondary-color;
+    cursor: pointer;
   }
   h4 {
     text-align: end;
+    color: $color-title;
   }
 }

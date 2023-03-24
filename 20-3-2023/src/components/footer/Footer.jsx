@@ -17,7 +17,9 @@ const Footer = () => {
               <em>Privacy</em>
             </li>
           </ul>
-          <h4>Create by Andrea Cosentino </h4>
+          <h4>
+            <em>Create by Andrea Cosentino</em>{" "}
+          </h4>
         </div>
       </div>
     </div>
