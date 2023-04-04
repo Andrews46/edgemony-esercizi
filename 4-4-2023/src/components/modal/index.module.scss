@@ -1,0 +1,16 @@
+.Modal {
+  .overlay {
+    position: fixed;
+    top: 20px;
+    width: 65vw;
+    height: 45vh;
+    background-color: cornflowerblue;
+    border-radius: 12px;
+
+    button {
+      border-radius: 100%;
+      border: 0;
+      color: blue;
+    }
+  }
+}
