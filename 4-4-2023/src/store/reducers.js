@@ -20,5 +20,29 @@ export const mainReducer = (state, action) => {
         ...state,
         isModalVisibile: false,
       };
+    case "INPUT_USERNAME":
+      return {
+        ...state,
+        todos: {
+          ...state.todos,
+          username: action.payload,
+        },
+      };
+    case "INPUT_CONTENT":
+      return {
+        ...state,
+        todos: {
+          ...state.todos,
+          todo: action.payload,
+        },
+      };
+    case "INPUT_IMAGE":
+      return {
+        ...state,
+        todos: {
+          ...state.todos,
+          image: action.payload,
+        },
+      };
   }
 };

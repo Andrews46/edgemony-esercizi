@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import { GET } from "../../utils/http";
+// import { GET } from "../../utils/http";
 import { randomHSLA } from "../../utils/funcs";
 import styles from "./index.module.scss";
 
 const Task = ({ taskData }) => {
   const [userData, setUserData] = useState({});
 
-  useEffect(() => {
-    GET(`users/${taskData.userId}`).then((data) => setUserData(data));
-  }, []);
+  // useEffect(() => {
+  //   GET(`users/${taskData.userId}`).then((data) => setUserData(data));
+  // }, []);
 
   return (
     <div className={styles.Task} style={{ background: `${randomHSLA()}` }}>

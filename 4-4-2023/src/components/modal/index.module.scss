@@ -1,16 +1,38 @@
 .Modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   .overlay {
     position: fixed;
-    top: 20px;
-    width: 65vw;
-    height: 45vh;
-    background-color: cornflowerblue;
-    border-radius: 12px;
-
-    button {
-      border-radius: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.542);
+  }
+  .formModal {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 40px;
+    background-color: rgb(0, 3, 155);
+    border-radius: 24px;
+    input {
+      padding-left: 10px;
+      height: 30px;
+      width: 300px;
       border: 0;
-      color: blue;
+      border-radius: 12px;
+      color: rgb(0, 24, 242);
+      outline: none;
+    }
+    .inputSubmit {
+      height: 30px;
+      width: 313px;
     }
   }
 }
