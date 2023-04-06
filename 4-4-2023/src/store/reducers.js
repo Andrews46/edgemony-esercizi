@@ -44,5 +44,13 @@ export const mainReducer = (state, action) => {
           image: action.payload,
         },
       };
+    case "INPUT_ID":
+      return {
+        ...state,
+        todos: {
+          ...state.todos,
+          id: state.tasksListData.length + 1,
+        },
+      };
   }
 };

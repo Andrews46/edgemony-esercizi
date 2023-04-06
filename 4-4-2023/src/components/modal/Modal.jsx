@@ -22,6 +22,9 @@ const Modal = () => {
   const inputImage = (e) => {
     dispatch({ type: "INPUT_IMAGE", paylod: e.target.value });
   };
+  const inputId = () => {
+    dispatch({ type: "INPUT_ID" });
+  };
   return (
     <div className={styles.Modal}>
       <div onClick={closeModal} className={styles.overlay}></div>
@@ -44,7 +47,12 @@ const Modal = () => {
           type="text"
           placeholder="Image"
         />
-        <input className={styles.inputSubmit} type="submit" />
+        <input
+          onChange={inputId}
+          value={state.todos.id}
+          className={styles.inputSubmit}
+          type="submit"
+        />
       </form>
     </div>
   );
